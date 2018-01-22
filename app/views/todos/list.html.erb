@@ -1,0 +1,21 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <h2>NO COMPLETADOS</h2>
+    <% @faltantes.each do |ele| %>
+      <ul>
+        <li> <%= ele.description %> </li>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <h2>COMPLETADOS</h2>
+    <% @completados.each do |ele| %>
+      <ul>
+        <li> <%= ele.description %> </li>
+      </ul>
+    <% end %>
+  </div>
+
+</div>

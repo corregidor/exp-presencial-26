@@ -1,0 +1,28 @@
+<!--
+<div class="well">
+  <ul>
+
+    <% @todos.each do |todo| %>
+    <li> <%= todo.description %>
+    <%= todo.completed %> </li>
+    <% end %>
+
+  </ul>
+
+</div> -->
+
+<ul>
+    <% @todos.each do |todo| %>
+    <li class= "well" style="list-style-type:none">
+    <%= todo.description %>
+    <%= todo.completed %>
+    <h6> <%= link_to "Mostrar", todo, method: :get %> </h6>
+    <h6> <%= link_to "Editar",  editar_path(todo) %> </h6>
+    <h6> <%= link_to "Eliminar", todo, method: :delete %> </h6>
+    <h6> <%= link_to "Completar", completo_path(todo), method: :get, class:'btn btn-success' %> </h6>
+    <% end %>
+    </li>
+</ul>
+
+
+<%= link_to "Crear ToDo", todos_new_path %>
